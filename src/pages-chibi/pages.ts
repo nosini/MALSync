@@ -110,6 +110,13 @@ import { Jellyfin } from './implementations/Jellyfin/main';
 import { AnimeStream } from './implementations/AnimeStream/main';
 import { MangaFire } from './implementations/MangaFire/main';
 import { AnimesDigital } from './implementations/AnimesDigital/main';
+import { YummyAni } from './implementations/YummyAni/main';
+import { DonghuaStream } from './implementations/DonghuaStream/main';
+import { BSTO } from './implementations/BSTO/main';
+import { FMTeam } from './implementations/FMTeam/main';
+import { BlueSolo } from './implementations/BlueSolo/main';
+import { FlixMomo } from './implementations/FlixMomo/main';
+import { NaszeAnime } from './implementations/NaszeAnime/main';
 import { Seanime } from './implementations/Seanime/main';
 
 export const pages: { [key: string]: PageInterface } = {
@@ -223,5 +230,12 @@ export const pages: { [key: string]: PageInterface } = {
   AnimeStream,
   MangaFire,
   AnimesDigital,
+  YummyAni,
+  DonghuaStream,
+  BSTO,
+  FMTeam,
+  BlueSolo,
+  FlixMomo,
+  NaszeAnime,
   Seanime,
 };

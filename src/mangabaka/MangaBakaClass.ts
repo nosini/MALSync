@@ -8,6 +8,10 @@ import { createApp } from '../utils/Vue';
 import quickLinksUi from './quickLinksUi.vue';
 import { Single } from '../_provider/MangaBaka/single';
 import { ProgressRelease } from '../utils/progressRelease';
+import { buildProviderUrl } from '../utils/slugs';
+
+// Enables extended event reporting
+document.documentElement.setAttribute('data-mb-extension', '1');
 
 let elementEventBuffer: BakaDocumentEvents[] = [];
 let elementEventListener: ((v: BakaDocumentEvents) => void) | null = null;
@@ -35,12 +39,12 @@ export class MangaBakaClass {
   }
 
   getUrl() {
-    return this.series?.id ? `https://mangabaka.org/${this.series?.id}` : '';
+    return this.series?.id ? buildProviderUrl('MANGABAKA', 'manga', this.series.id) : '';
   }
 
   getMalUrl() {
     return this.series?.source.my_anime_list.id
-      ? `https://myanimelist.net/manga/${this.series.source.my_anime_list.id}`
+      ? buildProviderUrl('MAL', 'manga', this.series.source.my_anime_list.id)
       : '';
   }
 
@@ -135,7 +139,7 @@ export class MangaBakaClass {
 
     let progress: ProgressRelease | null = null;
     if (isOverview) {
-      const single = new Single(`https://mangabaka.org/${series.id}`);
+      const single = new Single(buildProviderUrl('MANGABAKA', 'manga', series.id));
       single.forceSeries = series;
       single.forceLibraryEntry = libraryEntry;
       await single.update();
