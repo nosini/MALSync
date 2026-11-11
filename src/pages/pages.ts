@@ -1,7 +1,6 @@
 import { Mangadex } from './Mangadex/main';
 import { TurkAnime } from './TurkAnime/main';
 import { Emby } from './Emby/main';
-import { Netflix } from './Netflix/main';
 import { Animeflv } from './Animeflv/main';
 import { Jkanime } from './Jkanime/main';
 import { Proxer } from './Proxer/main';
@@ -55,7 +54,6 @@ import { ImmortalUpdates } from './ImmortalUpdates/main';
 import { LHTranslation } from './LHTranslation/main';
 import { MangasOrigines } from './MangasOrigines/main';
 import { DisasterScans } from './DisasterScans/main';
-import { Aniworld } from './Aniworld/main';
 import { BetterAnime } from './BetterAnime/main';
 import { BilibiliComics } from './BilibiliComics/main';
 import { MangaReader } from './MangaReader/main';
@@ -96,7 +94,6 @@ import { AniDream } from './AniDream/main';
 export const pages = {
   Mangadex,
   TurkAnime,
-  Netflix,
   Animeflv,
   Jkanime,
   Proxer,
@@ -151,7 +148,6 @@ export const pages = {
   LHTranslation,
   MangasOrigines,
   DisasterScans,
-  Aniworld,
   BetterAnime,
   BilibiliComics,
   MangaReader,
